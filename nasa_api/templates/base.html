@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>NASA - APOD</title>
+    </head>
+    <style>
+    a:link {
+      text-decoration: none;
+    }
+    </style>
+    <body>
+        <div class="container">
+            {% load static %}
+            <div class="row pt-5">
+                <div class="col-sm-2">
+                    <img src="{% static 'img/nasa_logo.png' %}" alt="NASA Logo">
+                </div>
+                <div class="col-sm-10 pl-4 pt-3">
+                    <strong>
+                        <span style="background-color:#C8C8C8">APOD:</span> Astronomy Picture of the Day<br/>
+                        <span style="background-color:#C8C8C8">powered by NASA Open APIs</span><br/>
+                        <a href="https://api.nasa.gov">https://api.nasa.gov</a>
+                    </strong>
+                </div>
+            </div>
+
+            <br />
+            <div class="row mb-3">
+                <div class="col">
+                    Explore daily pictures from NASA
+                </div>
+            </div>
+
+            {% include "search.html" %}
+            {% include "scripts.html" %}
+
+            {% block content %}{% endblock %}
+        </div>
+
+        <div id="error-message">
+            {{ message }}
+
+        </div>
+    </body>
+
+</html>

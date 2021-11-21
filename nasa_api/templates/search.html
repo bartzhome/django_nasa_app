@@ -1,0 +1,17 @@
+<form method="POST" action="">
+    <div class="row mb-3">
+        <div class="col-sm-4">
+            {% csrf_token %}
+            <label>Start date</label>
+            <input type="date" name="start-date"/>
+        </div>
+        <div class="col-sm-4">
+            <label>End date</label>
+            <input type="date" name="end-date" value="{{ date }}">
+        </div>
+        <div class="col-sm-2">
+            <input type="hidden" name="type" value="search" />
+            <button type="submit" class="btn btn-primary">Search</button>
+        </div>
+    </div>
+</form>

@@ -1,0 +1,26 @@
+    {% for item in results %}
+    <div class="row mb-2" style="border: 1px solid #CBCBCB">
+            <div class="col-md-6 ">
+                {% if item.copyright %}
+                <h4>{{ item.copyright }}</h4>
+                {% else %}
+                <h4>Unknown</h4><br/>
+                {% endif %}
+                <h4>{{ item.date }}</h4>
+                <h4>{{ item.title }}</h4>
+                {{ item.explanation }}
+            </div>
+            <div class="col-md-6 px-3 py-3">
+                {% if item.media_type == "image" %}
+                    <img src="{{ item.url }}" width="500" height="300">
+                {% else %}
+                    <iframe width="500" height="300" src="{{ item.url }}"></iframe>
+                {% endif %}
+            </div>
+    </div>
+    {% endfor %}
+
+
+
+<script>
+</script>

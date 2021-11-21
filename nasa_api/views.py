@@ -8,6 +8,15 @@ TODO:
         - Number of results to return
     - Utlities
         - Sorting
+    - Testing
+
+Future considerations:
+    - Connect to DB
+        - Add functions to keep data current
+    - Deploy to server
+    - Add user registration
+        - Allow users to "like" search results and save likes to profile
+
 """
 
 from django.shortcuts import render
